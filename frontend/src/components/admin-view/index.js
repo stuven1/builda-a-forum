@@ -68,6 +68,14 @@ export default class AdminView extends React.Component {
 
       <div>
         {this.renderQuestions()}
+        <label>
+          <h3>Answer:</h3>
+          <textarea
+            name="content"
+            value={this.state.content}
+            onChange={this.handleContent} />
+        </label>
+        <button type="submit">Send</button>
       </div>
     )
   }
