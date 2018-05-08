@@ -1,5 +1,6 @@
-import mongoose from "mongoose"
-import express from "express"
+import mongoose from "mongoose"//Skapar en objekthanterare som kommunicerar med databasen, Node.
+import express from "express" //Framework att skriva Node.js som hjälper till med att skapa "web application server framework".
+                             //Innehåller: router.  
 import bodyParser from "body-parser"
 import cors from "cors"
 
@@ -16,7 +17,7 @@ mongoose.Promise = Promise
 mongoose.connection.on("error", err => console.error("Connection error:", err))
 mongoose.connection.once("open", () => console.log("Connected to mongodb"))
 
-const Question = mongoose.model("Question", {
+const Question = mongoose.model("Question", { //Här sätts mongoose objeketen.
   name: String,
   headline:String,
   content: String
