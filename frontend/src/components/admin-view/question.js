@@ -14,7 +14,7 @@ componentDidMount(){
   )).then(json => {
     this.setState({ answers: json })
   })
-}
+ }
 
   handleClick = () => {
     const id = this.props.id
@@ -30,7 +30,7 @@ componentDidMount(){
   <div>{this.props.name}</div>
   <div>{this.props.content}</div>
   <div>{this.props.header}</div>
-  <div>{this.props.id}</div>
+  {/* <div>{this.props.id}</div> */}
 
   <div>
     <label>
