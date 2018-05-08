@@ -8,9 +8,7 @@ class Question extends React.Component {
     }
   }
 //sendform replay
-handleSubmit = event => {
-  event.preventDefault()
-  this.props.onNewTopic(this.state)
+
 componentDidMount(){
   fetch(`http://localhost:8080/faq/${this.props.id}/answers`).then(response => (
     response.json()
