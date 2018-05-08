@@ -20,7 +20,8 @@ mongoose.connection.once("open", () => console.log("Connected to mongodb"))
 const Question = mongoose.model("Question", { //Här sätts mongoose objeketen.
   name: String,
   headline:String,
-  content: String
+  content: String,
+  id: String
 })
 
 app.get("/", (req, res) => {
