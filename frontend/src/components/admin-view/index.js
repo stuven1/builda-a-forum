@@ -64,8 +64,7 @@ export default class AdminView extends React.Component {
             name={question.name}
             header={question.header}
             content={question.content}
-            id={question.id}
-            content={question.content} />
+            id={question.id} />
         })}
       </div>
 
