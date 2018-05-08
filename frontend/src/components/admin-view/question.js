@@ -8,6 +8,9 @@ class Question extends React.Component {
     }
   }
 //sendform replay
+handleSubmit = event => {
+  event.preventDefault()
+  this.props.onNewTopic(this.state)
 componentDidMount(){
   fetch(`http://localhost:8080/faq/${this.props.id}/answers`).then(response => (
     response.json()
@@ -41,9 +44,9 @@ componentDidMount(){
     </label>
   </div>
   <button onClick={this.props.id} type="submit">Answer</button>
-    </div>
+  </div>
     )
   }
-  }
+}
 
 export default Question

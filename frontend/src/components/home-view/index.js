@@ -1,7 +1,7 @@
 import React from "react"
 import TopicForm from "../topic-form"
 import Topic from "../topic"
-import Question from "../admin-view/question"
+import AdminView from "../admin-view"
 
 export default class HomeView extends React.Component {
   constructor(props) {
@@ -34,6 +34,8 @@ export default class HomeView extends React.Component {
         <section>
           <h4>Most recent questions:</h4>
           <hr />
+          <AdminView
+            content={this.props.id} />
           {this.state.topicList.map(topic => (
             <Topic
               headline={topic.headline}
@@ -42,6 +44,7 @@ export default class HomeView extends React.Component {
               date={topic.date} />
           ))}
         </section>
+
       </div>
     )
   }
