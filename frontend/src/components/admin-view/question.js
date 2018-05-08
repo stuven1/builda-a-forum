@@ -1,7 +1,20 @@
 import React from "react"
 
 class Question extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      answers: []
+    }
+  }
 //sendform replay
+componentDidMount(){
+  fetch(`http://localhost:8080/faq/${this.props.id}/answers`).then(response => (
+    response.json()
+  )).then(json => {
+    this.setState({ answers: json })
+  })
+}
 
   handleClick = () => {
     const id = this.props.id
@@ -10,6 +23,10 @@ class Question extends React.Component {
   render() {
     return(
 <div>
+  {this.state.answers.map((answer) =>
+    <p>{answer.content}</p>)}
+  <div>
+  </div>
   <div>{this.props.name}</div>
   <div>{this.props.content}</div>
   <div>{this.props.header}</div>

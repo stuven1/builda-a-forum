@@ -60,7 +60,7 @@ app.get("/faq", (req, res) => {
 })
 
 app.get("/faq/:id/answers", (req, res) => {
-  Answer.find().then(answer => {
+  Answer.find({ questionId: req.params.id }).then(answers => {
   res.json(answers)
   })
 })

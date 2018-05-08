@@ -5,10 +5,7 @@ export default class AdminView extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      // name: "",
-      // headline: "",
-      // content: "",
-      questions:[]
+      questions: []
     }
   }
 
@@ -64,7 +61,7 @@ export default class AdminView extends React.Component {
             name={question.name}
             header={question.header}
             content={question.content}
-            id={question.id} />
+            id={question._id} />
         })}
       </div>
 
