@@ -26,15 +26,13 @@ export default class HomeView extends React.Component {
     fetch("http://localhost:8080/answers").then(response => (
       response.json()
     )).then(json => {
-      console.log('answers: ', json)
       this.setState({ answers: json })
-      console.log('state: ', this.state)
     })
   }
 
   handleNewTopic = topic => {
     this.setState({
-      questions: [topic, ...this.state.topicList]
+      questions: [topic, ...this.state.questions]
     })
   }
 
@@ -51,7 +49,6 @@ export default class HomeView extends React.Component {
           {this.state.questions.map(question => {
 
             const answers = this.state.answers.filter(answer => answer.questionId === question._id)
-            console.log("answers for " + question._id + ":", answers)
 
             return <Topic
               headline={question.headline}
@@ -59,7 +56,6 @@ export default class HomeView extends React.Component {
               name={question.name}
               date={question.date}
               answers={answers} />
-
           })}
 
         </section>
