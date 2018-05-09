@@ -59,6 +59,12 @@ app.get("/faq", (req, res) => {
   })
 })
 
+app.get("/answers", (req, res) => {
+  Answers.find().then(answers => {
+  res.json(answers)
+  })
+})
+
 app.get("/faq/:id/answers", (req, res) => {
   Answer.find({ questionId: req.params.id }).then(answers => {
   res.json(answers)

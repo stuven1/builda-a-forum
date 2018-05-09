@@ -7,7 +7,8 @@ export default class HomeView extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      topicList: []
+      topicList: [],
+      answers: []
     }
   }
 
@@ -16,8 +17,18 @@ export default class HomeView extends React.Component {
       response.json()
     )).then(json => {
       this.setState({ topicList: json })
+      this.getAnswers()
     })
   }
+
+
+  getAnswers = () => {
+    fetch("http://localhost:8080/answers").then(response => (
+    response.json()
+  )).then(json => {
+    this.setState({ answers: json })
+  })
+}
 
   handleNewTopic = topic => {
     this.setState({
@@ -34,18 +45,24 @@ export default class HomeView extends React.Component {
         <section>
           <h4>Most recent questions:</h4>
           <hr />
-          <AdminView
-            content={this.props.id} />
-          {this.state.topicList.map(topic => (
-            <Topic
+
+          {this.state.topicList.map(topic => {
+
+            const answers = this.state.answers.filter(answer => answer.questionId === topic._id)
+
+            return <Topic
               headline={topic.headline}
               content={topic.content}
               name={topic.name}
-              date={topic.date} />
-          ))}
-        </section>
+              date={topic.date}
+              answers={answers} />
 
-      </div>
-    )
-  }
-}
+          })}
+
+
+            </section>
+
+            </div>
+          )
+          }
+          }
