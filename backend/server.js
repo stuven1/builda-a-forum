@@ -59,8 +59,9 @@ app.get("/faq", (req, res) => {
   })
 })
 
+
 app.get("/answers", (req, res) => {
-  Answers.find().then(answers => {
+  Answer.find().then(answers => {
   res.json(answers)
   })
 })
