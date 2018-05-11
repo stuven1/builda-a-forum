@@ -10,6 +10,8 @@ export default class Topic extends React.Component {
           <p>{this.props.content}</p>
           <p>{this.props.name}</p>
           <p>{this.props.date}</p>
+          {this.props.answers.map(answer =>
+            <p>{answer.content}</p>)}
         </div>
       </div>
     )
