@@ -9,11 +9,10 @@ body {
 }
 
 .inputs {
+  font-size: 25px;
 display: flex;
 justify-content: center;
 flex-flow: column;
-
-
 }
 
 .textarea {
@@ -24,9 +23,12 @@ flex-flow: column;
 }
 
 .questions {
+  font-size: 25px;
+  color: white;
   background-color: #78d2c5;
   margin: 10px;
   width: 20%;
+  padding: 10px;
 }
 
 button {
@@ -49,6 +51,8 @@ button:hover {
 }
 
 h1 {
+  font-weight: bold;
+  font-size: 30px;
   color: white;
   margin-bottom: 10px;
 }
@@ -59,7 +63,8 @@ margin: 10px;
 }
 
 .names {
-  color: grey;
+  font-weight: bold;
+  color: #78b2d2;
   font-style: italic;
   font-size: 15px;
 }
@@ -69,8 +74,15 @@ margin: 10px;
   color: white;
   width: 20%;
   font-size: 20px;
+  padding: 10px;
+  margin-top: 30px;
 }
 
 .content {
   font-size: 20px;
+}
+
+
+.box {
+    border-style: groove;
 }
