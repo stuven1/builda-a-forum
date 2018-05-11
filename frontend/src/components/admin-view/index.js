@@ -1,7 +1,8 @@
 import React from "react"
 import Question from "./question"
 
-export default class AdminView extends React.Component {
+
+export default class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
