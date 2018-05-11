@@ -56,8 +56,8 @@ export default class TopicForm extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit} >
-          <div>
-            <label>
+          <div className="questions">
+            <label className="inputs">
               <h3>Name:</h3>
               <input
                 name="name"
@@ -65,7 +65,7 @@ export default class TopicForm extends React.Component {
                 value={this.state.name}
                 onChange={this.handleName} />
             </label>
-            <label>
+            <label className="inputs">
               <h3>Topic:</h3>
               <input
                 name="headline"
@@ -73,7 +73,7 @@ export default class TopicForm extends React.Component {
                 value={this.state.headline}
                 onChange={this.handleHeadline} />
             </label>
-            <label>
+            <label className="textarea">
               <h3>Message:</h3>
               <textarea
                 name="content"

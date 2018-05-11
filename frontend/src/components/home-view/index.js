@@ -51,11 +51,11 @@ export default class HomeView extends React.Component {
             const answers = this.state.answers.filter(answer => answer.questionId === question._id)
 
             return <Topic
-              headline={question.headline}
-              content={question.content}
-              name={question.name}
-              date={question.date}
-              answers={answers} />
+                headline={question.headline}
+                content={question.content}
+                name={question.name}
+                date={question.date}
+                answers={answers} />
           })}
 
         </section>
