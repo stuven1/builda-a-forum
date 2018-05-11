@@ -43,15 +43,15 @@ app.post("/faq", (req, res) => {
     .catch(err => { res.status(400).send(err) })
 })
 
-  app.post("/faq/:id/answers", (req, res) => {
-    const answer = new Answer(req.body)
-    console.log("answer")
-    answer.questionId = req.params.id
+app.post("/faq/:id/answers", (req, res) => {
+  const answer = new Answer(req.body)
+  console.log("answer")
+  answer.questionId = req.params.id
 
-    answer.save()
-      .then(() => { res.status(201).send("Answer") })
-      .catch(err => { res.status(400).send(err) })
-  })
+  answer.save()
+    .then(() => { res.status(201).send("Answer") })
+    .catch(err => { res.status(400).send(err) })
+})
 
 app.get("/faq", (req, res) => {
   Question.find().then(questions => {

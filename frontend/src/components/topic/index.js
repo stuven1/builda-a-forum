@@ -7,11 +7,11 @@ export default class Topic extends React.Component {
       <div>
         <h1>{this.props.headline}</h1>
         <div>
-          <p>{this.props.content}</p>
-          <p>{this.props.name}</p>
+          <p className="content">{this.props.content}</p>
+          <p className="names">{this.props.name}</p>
           <p>{this.props.date}</p>
           {this.props.answers.map(answer =>
-            <p>{answer.content}</p>)}
+            <p className="answerColor">{answer.content}</p>)}
         </div>
       </div>
     )
