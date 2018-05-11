@@ -32,9 +32,9 @@ export default class HomeView extends React.Component {
     })
   }
 
-  handleNewTopic = topic => {
+  handleNewQuestion = question => {
     this.setState({
-      questions: [topic, ...this.state.topicList]
+      questions: [question, ...this.state.questions]
     })
   }
 
@@ -43,7 +43,7 @@ export default class HomeView extends React.Component {
       <div >
         <h4>Ask your question:</h4>
         <hr />
-        <TopicForm onNewTopic={this.question} />
+        <TopicForm onNewTopic={this.handleNewQuestion} />
         <section>
           <h4>Most recent questions:</h4>
           <hr />
