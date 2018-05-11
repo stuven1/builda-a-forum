@@ -1,0 +1,30 @@
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+.link-admin a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.link-admin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.list {
+display: flex;
+flex-direction: row;
+padding: 0;
+color: white;
+border: 1px solid white;
+margin-left: 5px;
+}
