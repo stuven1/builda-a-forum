@@ -14,7 +14,9 @@ componentDidMount(){
     response.json()
   )).then(json => {
     this.setState({ answers: json })
+console.log(json)
   })
+
  }
 
   handleClick = () => {
