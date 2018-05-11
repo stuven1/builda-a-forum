@@ -86,3 +86,16 @@ margin: 10px;
 .box {
     border-style: groove;
 }
+
+.admin {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  border-style: groove;
+}
+
+.adminTextarea {
+font-size: 15px;
+}
+.adminSideAnswer {
+}

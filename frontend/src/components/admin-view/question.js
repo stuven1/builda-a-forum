@@ -38,15 +38,15 @@ componentDidMount(){
     return (
       <div>
         {this.state.answers.map((answer) =>
-          <p>{answer.content}</p>)}
+          <p className="adminSideAnswer">Answer: {answer.content}</p>)}
         <div>
         </div>
-        <div>{this.props.name}</div>
-        <div>{this.props.content}</div>
         <div>{this.props.header}</div>
+        <div>Name: {this.props.name}</div>
+        <div>Question: {this.props.content}</div>
         {/* <div>{this.props.id}</div> */}
 
-        <div>
+        <div className="adminTextarea">
           <label>
             <h3>Reply message</h3>
             <textarea

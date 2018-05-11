@@ -56,14 +56,16 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        {this.state.questions.map((question, index) => {
-          return <Question
-            key={index}
-            name={question.name}
-            header={question.header}
-            content={question.content}
-            id={question._id} />
-        })}
+        <div className="admin">
+          {this.state.questions.map((question, index) => {
+            return <Question
+              key={index}
+              name={question.name}
+              header={question.header}
+              content={question.content}
+              id={question._id} />
+          })}
+        </div>
       </div>
 
   ) }
